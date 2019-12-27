@@ -2,6 +2,9 @@ version: '3'
 
 services:
   sinatra:
+    # tty, stdin_open は binding.pry のために必要
+    tty: true
+    stdin_open: true
     build:
       # Dockerfile の app のコピーのために必要なパス指定
       context: ../
